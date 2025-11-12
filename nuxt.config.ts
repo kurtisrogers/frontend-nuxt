@@ -1,18 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  buildDir: 'dist',
   // css: ['~/assets/css/main.css'],
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
-  modules: ['@nuxt/test-utils/module', '@nuxtjs/storybook'],
+  modules: ['@nuxt/test-utils/module', '@nuxt/content', '@nuxt/eslint'],
   components: [
     {
       path: '~/components',
       pathPrefix: false,
     },
   ],
+  compatibilityDate: '2025-07-15',
   typescript: {
     typeCheck: true,
     strict: true,
+  },
+  eslint: {
+    config: {
+      stylistic: true, // Enable stylistic rules
+    },
   },
 })
