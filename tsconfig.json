@@ -1,6 +1,18 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
   "files": [],
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+  },
+  "storybook": {
+    "url": "http://localhost:6006",
+    "storybookRoute": "/__storybook__",
+    "port": 6006,
+  },
   "references": [
     {
       "path": "./.nuxt/tsconfig.app.json"
