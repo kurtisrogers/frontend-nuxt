@@ -1,15 +1,11 @@
 <template>
-  <div>
-    Hello
-  </div>
+  <div>Hello</div>
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'default',
-})
+  layout: "default",
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
