@@ -9,6 +9,31 @@
     <UIMain as="main">
       <NuxtLayout>
         <NuxtPage />
+        <UISeparator color="primary" />
+        <UIPageSection>
+          <UIPageCard
+            title="Looking for a dev?"
+            description="Lucky you! I'm looking for my next gig. Interested in this exciting opportunity? You know what to do."
+            icon="i-lucide-code"
+            orientation="horizontal"
+            spotlight
+            spotlight-color="primary"
+            variant="subtle"
+          >
+            <template #footer>
+              <div class="flex items-center justify-between">
+                <UIButton class="mr-2" to="/about">About</UIButton>
+                <UIButton
+                  to="/documents/KurtisRogersCV.pdf"
+                  external
+                  trailing
+                  leading-icon="i-lucide-download"
+                  >Download my CV</UIButton
+                >
+              </div>
+            </template>
+          </UIPageCard>
+        </UIPageSection>
       </NuxtLayout>
     </UIMain>
     <UIFooter>
