@@ -1,6 +1,6 @@
 <template>
   <UIPageHero as="section" class="thing" orientation="horizontal">
-    <template #title>Contact</template>
+    <template #title>Technology</template>
     <template #description>
       <p>
         An expert in popular frontend frameworks, with over a decade of software engineering
