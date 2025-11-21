@@ -15,6 +15,11 @@ export default defineNuxtConfig({
     },
   ],
   css: ["~/assets/css/main.css"],
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
   ui: {
     prefix: "UI",
     content: true,
@@ -35,7 +40,7 @@ export default defineNuxtConfig({
     mode: "css",
     cssLayer: "base",
     serverBundle: {
-      collections: ["uil", "mdi"],
+      collections: ["uil", "mdi", "lucide"],
     },
   },
 });

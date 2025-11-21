@@ -1,18 +1,12 @@
 <template>
-  <UIPageHero orientation="horizontal">
-    <template #title>Fullstack Node Software Engineer</template>
+  <UIPageHero as="section">
+    <template #title>Hello.</template>
     <template #description>
       <p>
         An expert in popular frontend frameworks, with over a decade of software engineering
         experience delivering innovative web solutions.
       </p>
     </template>
-    <NuxtImg
-      class="w-full object-cover object-center"
-      src="/images/optimised/deepspace-lg.webp"
-      alt="deep space"
-      preload
-    />
   </UIPageHero>
   <UIPageSection icon="i-lucide-code">
     <template #title> Architecting Clean Code from Design to Deployment </template>
@@ -41,4 +35,6 @@ definePageMeta({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+/* https://css-pattern.com/ */
+</style>

@@ -1,6 +1,6 @@
 import type { NavigationMenuItem } from "@nuxt/ui";
 
-const navigation = [
+const mainNavigatonItems = [
   {
     label: "Home",
     to: "/",
@@ -12,15 +12,15 @@ const navigation = [
     target: "_self",
   },
   {
-    label: "articles",
-    to: "/articles",
+    label: "Work",
+    to: "/work-experience",
     target: "_self",
   },
   {
-    label: "Case Studies",
-    to: "/case-studies",
+    label: "Technology",
+    to: "/technology",
     target: "_self",
   },
 ] as NavigationMenuItem[];
 
-export default navigation;
+export default mainNavigatonItems;

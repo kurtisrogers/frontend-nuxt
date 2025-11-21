@@ -3,4 +3,53 @@
 
 @theme {
   --font-sans: 'Public Sans', sans-serif;
+  --color-primary: var(--color-black);
+  --color-secondary: var(--color-white);
+  --ui-primary: var(--color-red-400);
+  --ui-secondary: var(--color-red-400);
+
+  /* overrides for Nuxt UI */
+  --ui-text-dimmed: var(--ui-color-neutral-500);
+  --ui-text-muted: var(--color-black);
+  --ui-text-toned: var(--ui-color-neutral-300);
+  --ui-text: var(--color-black);
+  --ui-text-highlighted: var(--color-black);
+  --ui-text-inverted: var(--color-white);
+  --ui-bg: var(--color-white);
+  --ui-bg-muted: var(--ui-color-neutral-800);
+  --ui-bg-elevated: var(--ui-color-neutral-300);
+  --ui-bg-accented: var(--ui-color-neutral-700);
+  --ui-bg-inverted: var(--color-white);
+  --ui-border: var(--color-black);
+  --ui-radius: 0;
+  --ui-border-muted: var(--ui-color-neutral-700);
+  --ui-border-accented: var(--ui-color-neutral-700);
+  --ui-border-inverted: var(--color-white);
+}
+
+.dark {
+  --color-primary: var(--color-white);
+  --color-secondary: var(--color-red-400);
+  --ui-primary: var(--color-red-400);
+  --ui-secondary: var(--color-red-400);
+  
+  /* overrides for Nuxt UI */
+  --ui-primary: var(--color-red-400);
+  --ui-bg: var(--color-black);
+  --ui-text: var(--color-secondary);
+  --ui-text-dimmed: var(--ui-color-neutral-500);
+  --ui-text-muted: var(--ui-color-neutral-100);
+  --ui-text-toned: var(--ui-color-neutral-300);
+  --ui-text: var(--ui-color-neutral-200);
+  --ui-text-highlighted: var(--color-white);
+  --ui-text-inverted: var(--ui-color-neutral-900);
+  --ui-bg-muted: var(--ui-color-neutral-800);
+  --ui-bg-elevated: var(--color-red-400);
+  --ui-bg-accented: var(--ui-color-neutral-700);
+  --ui-bg-inverted: var(--color-white);
+  --ui-border: var(--color-white);
+  --ui-radius: 0;
+  --ui-border-muted: var(--ui-color-neutral-700);
+  --ui-border-accented: var(--ui-color-neutral-700);
+  --ui-border-inverted: var(--color-white);
 }
