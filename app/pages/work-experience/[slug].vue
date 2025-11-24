@@ -1,5 +1,5 @@
 <template>
-  <UIPageHero as="section" class="thing" orientation="horizontal">
+  <UIPageHero as="section" orientation="horizontal">
     <template #title>{{ $route.params.slug }}</template>
     <template #description>
       <p>

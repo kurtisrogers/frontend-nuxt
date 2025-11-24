@@ -31,20 +31,26 @@ import mainNavigatonItems from "#shared/data/navigation";
       <NuxtLayout>
         <NuxtPage />
         <UISeparator color="primary" />
-        <UIPageSection>
+        <UIPageSection class="threeDimRectangles">
           <UIPageCard
-            class="rounded-none"
-            title="Looking for a dev?"
-            description="Lucky you! I'm looking for my next gig. Interested in this exciting opportunity?"
+            class="rounded-none is-footer-card"
+            description="I'm looking for my next gig. Let's smash some eggs and craft an elegant omelette..."
             icon="i-lucide-code"
             orientation="horizontal"
-            spotlight
-            spotlight-color="primary"
-            variant="soft"
+            variant="solid"
           >
+            <template #title>
+              <h2>Looking for a dev?</h2>
+            </template>
             <template #footer>
               <div class="flex items-center justify-between">
-                <UIButton class="mr-2" to="/about" trailing-icon="i-lucide-user">About</UIButton>
+                <UIButton
+                  v-if="!$route.path.includes('about')"
+                  class="mr-2"
+                  to="/about"
+                  trailing-icon="i-lucide-user"
+                  >About</UIButton
+                >
                 <UIButton
                   to="/documents/KurtisRogersCV.pdf"
                   external
@@ -81,7 +87,7 @@ import mainNavigatonItems from "#shared/data/navigation";
           icon="i-simple-icons-github"
           color="neutral"
           variant="ghost"
-          to="https://github.com/kurtisrogers/respositories"
+          to="https://github.com/orgs/kurtisrogers/repositories"
           target="_blank"
           aria-label="GitHub"
         />
@@ -90,7 +96,9 @@ import mainNavigatonItems from "#shared/data/navigation";
             <UIButton loading variant="ghost" color="neutral" />
           </template>
         </UIColorModeButton>
-        {{ new Date().getFullYear() }}
+        <time :datetime="new Date().getFullYear().toString()" class="mr-1">{{
+          new Date().getFullYear()
+        }}</time>
       </template>
     </UIFooter>
   </UIApp>

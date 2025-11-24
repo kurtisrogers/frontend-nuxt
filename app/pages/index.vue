@@ -1,5 +1,5 @@
 <template>
-  <UIPageHero as="section">
+  <UIPageHero as="section" orientation="horizontal" reverse class="is-home">
     <template #title>Hello.</template>
     <template #description>
       <p>
