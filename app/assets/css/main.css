@@ -1,92 +1,25 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@theme {
-  --font-sans: 'Public Sans', sans-serif;
-  --color-primary: var(--color-black);
-  --color-secondary: var(--color-white);
-  --ui-primary: var(--color-red-400);
-  --ui-secondary: var(--color-red-400);
+@source "../../../content/**/*";
 
-  /* overrides for Nuxt UI */
-  --ui-text-dimmed: var(--ui-color-neutral-500);
-  --ui-text-muted: var(--color-black);
-  --ui-text-toned: var(--ui-color-neutral-300);
-  --ui-text: var(--color-black);
-  --ui-text-highlighted: var(--color-black);
-  --ui-text-inverted: var(--color-white);
-  --ui-bg: var(--color-white);
-  --ui-bg-muted: var(--ui-color-neutral-800);
-  --ui-bg-elevated: var(--color-red-300);
-  --ui-bg-accented: var(--ui-color-neutral-700);
-  --ui-bg-inverted: var(--color-white);
-  --ui-border: var(--color-black);
-  --ui-radius: 0;
-  --ui-border-muted: var(--ui-color-neutral-700);
-  --ui-border-accented: var(--ui-color-neutral-700);
-  --ui-border-inverted: var(--color-white);
+@theme static {
+  --font-sans: 'Public Sans', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+}
+
+:root {
+  --ui-container: var(--container-4xl);
+
+  ::selection {
+    color: #282a30;
+    background-color: #c8c8c8;
+  }
 }
 
 .dark {
-  --color-primary: var(--color-white);
-  --color-secondary: var(--color-red-400);
-  --ui-primary: var(--color-red-400);
-  --ui-secondary: var(--color-red-400);
-  
-  /* overrides for Nuxt UI */
-  --ui-primary: var(--color-red-400);
-  --ui-bg: var(--color-black);
-  --ui-text: var(--color-secondary);
-  --ui-text-dimmed: var(--ui-color-neutral-500);
-  --ui-text-muted: var(--ui-color-neutral-100);
-  --ui-text-toned: var(--ui-color-neutral-300);
-  --ui-text: var(--ui-color-neutral-200);
-  --ui-text-highlighted: var(--color-white);
-  --ui-text-inverted: var(--ui-color-neutral-900);
-  --ui-bg-muted: var(--ui-color-neutral-800);
-  --ui-bg-elevated: var(--color-red-400);
-  --ui-bg-accented: var(--ui-color-neutral-700);
-  --ui-bg-inverted: var(--color-white);
-  --ui-border: var(--color-white);
-  --ui-radius: 0;
-  --ui-border-muted: var(--ui-color-neutral-700);
-  --ui-border-accented: var(--ui-color-neutral-700);
-  --ui-border-inverted: var(--color-white);
-}
-
-.threeDimSquares {
-  --s: 144px; /* control the size*/
-  --c1: var(--color-primary);
-  --c2: var(--color-secondary);
-  --c3: var(--ui-bg-accented);
-  
-  --_g: var(--c1) 10%,var(--c2) 10.5% 19%,#0000 19.5% 80.5%,var(--c2) 81% 89.5%,var(--c3) 90%;
-  --_c: from -90deg at 37.5% 50%,#0000 75%;
-  --_l1: linear-gradient(145deg,var(--_g));
-  --_l2: linear-gradient( 35deg,var(--_g));
-  background: 
-    var(--_l1), var(--_l1) calc(var(--s)/2) var(--s),
-    var(--_l2), var(--_l2) calc(var(--s)/2) var(--s),
-    conic-gradient(var(--_c),var(--c1) 0) calc(var(--s)/8) 0,
-    conic-gradient(var(--_c),var(--c3) 0) calc(var(--s)/2) 0,
-    linear-gradient(90deg,var(--c3) 38%,var(--c1) 0 50%,var(--c3) 0 62%,var(--c1) 0);
-  background-size: var(--s) calc(2*var(--s)/3);
-}
-
-.threeDimRectangles {
-  --s: 144px; /* control the size*/
-  --c1: var(--color-primary);
-  --c2: var(--color-secondary);
-  --c3: var(--ui-bg-accented);
-  
-  --_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;
-  --_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);
-  background:
-    var(--_g),var(--_g) 0 calc(var(--s)/2),
-    conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
-    conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
-    linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
-    conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
-    linear-gradient(-150deg,var(--_l)) var(--c3);
-  background-size: calc(0.866*var(--s)) var(--s);
+  ::selection {
+    color: #ffffff;
+    background-color: #474747;
+  }
 }

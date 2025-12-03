@@ -7,13 +7,13 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxt/icon",
     "@nuxt/image",
+    "nuxt-og-image",
+    "@vueuse/nuxt",
+    "motion-v/nuxt",
   ],
-  components: [
-    {
-      path: "~/components",
-      pathPrefix: false,
-    },
-  ],
+  devtools: {
+    enabled: true,
+  },
   css: ["~/assets/css/main.css"],
   router: {
     options: {
@@ -21,10 +21,15 @@ export default defineNuxtConfig({
     },
   },
   ui: {
-    prefix: "UI",
     content: true,
   },
   compatibilityDate: "2025-07-15",
+  nitro: {
+    prerender: {
+      routes: ["/"],
+      crawlLinks: true,
+    },
+  },
   typescript: {
     typeCheck: true,
     strict: true,
@@ -36,7 +41,7 @@ export default defineNuxtConfig({
   },
   icon: {
     size: "2rem",
-    class: "logo",
+    class: "icon",
     mode: "css",
     cssLayer: "base",
     serverBundle: {
