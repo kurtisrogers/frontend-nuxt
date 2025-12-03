@@ -1,82 +1,50 @@
 export default defineAppConfig({
+  global: {
+    picture: {
+      dark: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      light:
+        "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "My profile picture",
+    },
+    meetingLink: "https://cal.com/",
+    email: "ui-pro@nuxt.com",
+    available: true,
+  },
   ui: {
-    header: {
-      slots: {
-        root: "max-w-(--ui-container) mx-auto bg-white/60 dark:bg-black/60 h-auto py-4 border-none",
-        container: "!px-0 w-auto mx-4",
-        header: "h-auto py-4 mx-4 !px-0",
-      },
-    },
-    footer: {
-      slots: {
-        root: "flex justify-center",
-        container: "max-w-(--ui-container) mx-4 !p-8 !px-0 flex-row-reverse",
-        right: "lg:justify-start",
-        left: "lg:justify-end",
-      },
-    },
-    pageSection: {
-      slots: {
-        root: "first:mt-0 m-4",
-        container: "!px-0",
-      },
-    },
-    separator: {
-      slots: {
-        root: "max-w-(--ui-container) mx-auto px-4 overflow-hidden",
-      },
-    },
-    button: {
-      slots: {
-        base: "border-3 border-white dark:border-black focus:!outline-white focus:dark:!outline-black",
-      },
-    },
-    pageCard: {
-      slots: {
-        root: "group threeDimSquares",
-        title: "text-black dark:text-white",
-        leadingIcon: "text-white dark:text-black",
-      },
-      variants: {
-        variant: {
-          solid: {
-            root: "border-3 border-black mx-4",
-            container: "bg-linear-to-br to-red-400 from-black dark:from-white",
-            title: "text-white dark:text-black",
-            description: "text-white dark:text-black",
-          },
-        },
-      },
+    colors: {
+      primary: "blue",
+      neutral: "neutral",
     },
     pageHero: {
       slots: {
-        root: "m-4 py-8 px-4",
-        title: "text-white dark:text-black",
-        description: "text-white dark:text-black",
-        container:
-          "overflow-hidden bg-linear-to-br to-red-400 from-black dark:from-white border-3 border-black dark:border-white !pb-4",
-      },
-      // https://tailwindcss.com/docs/hover-focus-and-other-states#arbitrary-groups
-      variants: {
-        orientation: {
-          vertical: {
-            root: "group threeDimRectangles",
-          },
-          horizontal: {
-            root: "group threeDimSquares",
-          },
-        },
-        reverse: {
-          true: {
-            title: "group-[.is-home]:italic",
-            container: "group-[.is-home]:text-right reversed",
-          },
-        },
+        container: "py-18 sm:py-24 lg:py-32",
+        title: "mx-auto max-w-xl text-pretty text-3xl sm:text-4xl lg:text-5xl",
+        description: "mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted",
       },
     },
-    icons: {
-      light: "lucide-moon",
-      dark: "lucide-sun",
-    },
+  },
+  footer: {
+    credits: `Built with Nuxt UI • © ${new Date().getFullYear()}`,
+    colorMode: false,
+    links: [
+      {
+        icon: "i-simple-icons-discord",
+        to: "https://go.nuxt.com/discord",
+        target: "_blank",
+        "aria-label": "Nuxt on Discord",
+      },
+      {
+        icon: "i-simple-icons-x",
+        to: "https://go.nuxt.com/x",
+        target: "_blank",
+        "aria-label": "Nuxt on X",
+      },
+      {
+        icon: "i-simple-icons-github",
+        to: "https://github.com/nuxt/ui",
+        target: "_blank",
+        "aria-label": "Nuxt UI on GitHub",
+      },
+    ],
   },
 });
