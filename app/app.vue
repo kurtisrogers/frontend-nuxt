@@ -43,6 +43,11 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     }
   ),
 ]);
+
+const route = useRoute();
+const { data: page } = await useAsyncData(route.path, () => {
+  return queryCollection("index").path(route.path).first();
+});
 </script>
 
 <template>
@@ -50,6 +55,8 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     <NuxtLayout>
       <UMain class="relative">
         <NuxtPage />
+        <LandingTestimonials v-if="page" :page />
+        <LandingFAQ v-if="page" :page />
       </UMain>
     </NuxtLayout>
 

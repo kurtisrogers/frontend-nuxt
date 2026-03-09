@@ -29,7 +29,6 @@ defineProps<{
           <p class="text-sm">
             {{ experience.date }}
           </p>
-          <USeparator />
           <ULink class="flex items-center gap-1" :to="experience.company.url" target="_blank">
             <span class="text-sm">
               {{ experience.position }}

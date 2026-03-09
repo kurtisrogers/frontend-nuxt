@@ -36,7 +36,7 @@ const ui = {
       description: 'text-left mt-2 text-sm sm:text-md lg:text-sm text-muted',
     }"
   >
-    <UTabs :items orientation="horizontal" :ui>
+    <UTabs :items orientation="horizontal" :ui :unmount-on-hide="false">
       <template #content="{ item }">
         <UAccordion
           trailing-icon="lucide:plus"
